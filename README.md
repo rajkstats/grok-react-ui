@@ -10,6 +10,9 @@ This library provides React components that replicate the Grok UI experience for
 
 ## Screenshots
 
+### Thinking Steps Component
+![Thinking Steps UI](public/thinking.jpeg)
+
 The GrokThinkingSteps component displays the agent's thinking process with expandable sections for different types of steps:
 - Thinking steps (brain icon)
 - DeepSearch steps (magnifying glass icon)
@@ -17,6 +20,15 @@ The GrokThinkingSteps component displays the agent's thinking process with expan
 - Conclusion steps (checkmark icon)
 
 Each step can be expanded to show more details, and the component animates as new steps are added.
+
+### DeepSearch Component
+![DeepSearch Component](public/deepsearch.jpeg)
+
+The DeepSearch component shows search results with:
+- Progress indicator
+- Source cards with favicons
+- Snippets from sources
+- Summary of findings
 
 ## Real LLM Example
 
