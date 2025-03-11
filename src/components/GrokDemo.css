@@ -1,0 +1,144 @@
+/* GrokDemo Component Styles */
+.grok-demo-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grok-demo-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grok-demo-header h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.grok-demo-header p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.grok-demo-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.grok-demo-tab {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.grok-demo-tab:hover {
+  background-color: #e8e8e8;
+}
+
+.grok-demo-tab.active {
+  background-color: #4d9fff;
+  color: white;
+  border-color: #4d9fff;
+}
+
+.grok-demo-tab-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.grok-demo-input-container {
+  margin-bottom: 30px;
+}
+
+.grok-demo-input-container form {
+  display: flex;
+  gap: 10px;
+}
+
+.grok-demo-input-container input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.grok-demo-input-container input:focus {
+  border-color: #4d9fff;
+}
+
+.grok-demo-input-container button {
+  background-color: #4d9fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.grok-demo-input-container button:hover:not(:disabled) {
+  background-color: #3a8eee;
+}
+
+.grok-demo-input-container button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.grok-demo-content {
+  min-height: 300px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .grok-demo-container {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  .grok-demo-header h1 {
+    color: #f5f5f5;
+  }
+  
+  .grok-demo-header p {
+    color: #a0a0a0;
+  }
+  
+  .grok-demo-tab {
+    background-color: #1e1e1e;
+    border-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+  
+  .grok-demo-tab:hover {
+    background-color: #2a2a2a;
+  }
+  
+  .grok-demo-input-container input {
+    background-color: #1e1e1e;
+    border-color: #2a2a2a;
+    color: #f5f5f5;
+  }
+  
+  .grok-demo-input-container input::placeholder {
+    color: #888;
+  }
+} 
