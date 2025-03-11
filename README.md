@@ -227,7 +227,7 @@ npm start
 
 There are several ways to integrate these components into your own React project:
 
-### Option 1: Copy Components (Simplest)
+### Copy Components (Simplest)
 
 1. Copy the component files you need from the `src/components` directory:
    - For thinking steps: `GrokThinkingSteps.jsx` and `GrokThinkingSteps.css`
@@ -237,60 +237,7 @@ There are several ways to integrate these components into your own React project
 
 3. Import and use them as shown in the Usage section below
 
-### Option 2: Use as a Git Submodule
 
-```bash
-# Add as a submodule to your project
-git submodule add https://github.com/yourusername/grok-react-ui.git grok-ui
-
-# Update your import paths to point to the submodule
-# Example: import GrokThinkingSteps from './grok-ui/src/components/GrokThinkingSteps';
-```
-
-### Option 3: Package as an npm Package (For Reuse Across Projects)
-
-If you plan to use these components across multiple projects, you can fork this repository and publish it as an npm package:
-
-1. Update the package.json to include:
-```json
-{
-  "name": "your-package-name",
-  "version": "0.1.0",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "files": ["dist"],
-  "scripts": {
-    "build": "rollup -c",
-    "prepublishOnly": "npm run build"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  }
-}
-```
-
-2. Create an index.js file that exports all components:
-```javascript
-export { default as GrokThinkingSteps } from './components/GrokThinkingSteps';
-export { default as DeepSearch } from './components/DeepSearch';
-```
-
-3. Add rollup or another bundler to package the components
-
-4. Publish to npm:
-```bash
-npm publish
-```
-
-5. Then in your projects:
-```bash
-npm install your-package-name
-```
-
-```javascript
-import { GrokThinkingSteps, DeepSearch } from 'your-package-name';
-```
 
 ### CSS Integration
 
